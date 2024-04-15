@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 100066, guid: 3afad42cab5a57a4c9f19f8deaaf8689, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: 3afad42cab5a57a4c9f19f8deaaf8689, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -303,6 +307,7 @@ MonoBehaviour:
   jumpForce: 10
   gravityModifier: 1.5
   isOnGround: 1
+  gameOver: 0
 --- !u!65 &210138083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -634,7 +639,7 @@ GameObject:
   - component: {fileID: 2014335012}
   m_Layer: 9
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
