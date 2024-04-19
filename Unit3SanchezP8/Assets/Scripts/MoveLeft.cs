@@ -35,5 +35,6 @@ public class MoveLeft : MonoBehaviour
             Destroy(gameObject);
             Score += 1;
         }
+
     }
 }
