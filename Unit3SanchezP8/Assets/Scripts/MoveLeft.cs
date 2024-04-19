@@ -7,6 +7,7 @@ public class MoveLeft : MonoBehaviour
     private float speed = 30;
     private PlayerController playerControllerScript;
     private float leftbound = -15;
+    public float Score = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -20,10 +21,19 @@ public class MoveLeft : MonoBehaviour
         if (playerControllerScript.gameOver == false)
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed);
+            if(playerControllerScript.isdashing == true)
+            {
+                transform.Translate(Vector3.left * speed * Time.deltaTime * playerControllerScript.dash);
+            }
+            else
+            {
+                transform.Translate(Vector3.left * speed * Time.deltaTime);
+            }
         }
         if (transform.position.x < leftbound && gameObject.CompareTag("obsticale"))
         {
             Destroy(gameObject);
+            Score += 1;
         }
     }
 }
